@@ -17,5 +17,9 @@ Route::get('/', function () {
 
 Route::get('messages', 'MessageController@all');
 
-Route::get('messages/{messageID}', 'MessageController@show');
+Route::get('messages/new', 'MessageController@new');
+
+Route::get('messages/{messageId}', 'MessageController@show');
+
+Route::post('messages', 'MessageController@create');
 
