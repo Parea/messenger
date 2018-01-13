@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Message;
 
 class MessagesTableSeeder extends Seeder
 {
@@ -25,8 +26,7 @@ class MessagesTableSeeder extends Seeder
     endfor;
 
     foreach($messages AS $message):
-        DB::table('messages')->insert($message);
+        Message::create($message);
     endforeach;
-
     }
 }

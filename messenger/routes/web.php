@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('message', function () {
-    return view('messages/message');
+Route::get('/', function () {
+    return view('welcome');
 });
 
-// Route::get('message', function(){
-//     return view('message');
-// });
+Route::get('messages', 'MessageController@all');
+
+Route::get('messages/{messageID}', 'MessageController@show');
+
